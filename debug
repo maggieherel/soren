@@ -2,7 +2,8 @@
 PRIZM prizm;
 
 int counter = 0 ;
-
+bool isMorning = true;
+String myName = "Mr. Slater";
 void setup() {
   prizm.PrizmBegin();
   Serial.begin(9600);
@@ -11,6 +12,10 @@ void setup() {
 }
 
 void loop() {
-  counter +=1;
-  Serial.println("Loop" + (String (counter));
-}
+  //counter +=1;
+  //Serial.println("Loop" + (String (counter));
+  if (isMorning){
+    Serial.println("Good Morning " + myName);
+    isMorning = false;
+  } else {
+    Serial.println("goop " + myName);
