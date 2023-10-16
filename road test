@@ -1,0 +1,45 @@
+//code for workcube 
+
+#include <PRIZM.h>   //link up the library
+PRIZM prizm;        //declare object (refence to prism)
+
+void setup(){
+  prizm.PrizmBegin();
+  prizm.setMotorInvert(2,1);
+  }
+void loop (){
+  Forward();
+  delay (2000);
+  BREAK();
+  delay(1000);
+  TurnRight();
+  delay (600);
+  BREAK();
+  delay (400);
+}
+void Forward(){
+  prizm.setMotorPowers(100,100);
+}
+void Backward(){
+  prizm.setMotorPowers(-100,-100);
+}
+void TurnLeft(){
+  prizm.setMotorPowers(100,50);
+
+}
+void TurnRight(){
+   prizm.setMotorPowers(60,100);
+ 
+}
+void PivotLeft(){
+  prizm.setMotorPowers(-100,100);
+ 
+  
+}
+void PivotRight(){
+  prizm.setMotorPowers(100,-100);
+  
+}
+void BREAK(){
+  prizm.setMotorPowers(125,125);
+}
