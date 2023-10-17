@@ -9,13 +9,23 @@ void setup(){
   }
 void loop (){
   Forward();
-  delay (2000);
+  delay (2300);
   BREAK();
   delay(1000);
   TurnRight();
-  delay (600);
+  delay (1000);
   BREAK();
-  delay (400);
+  delay (1000);
+  TurnLeft();
+  delay (1000);
+  BREAK();
+  Forward();
+  delay (600);
+  prizm.setMotorPowers(0,0);
+  delay(1000); 
+  prizm.setServoPosition(1,180);
+  delay (1000);
+  prizm.PrizmEnd();
 }
 void Forward(){
   prizm.setMotorPowers(100,100);
@@ -24,11 +34,11 @@ void Backward(){
   prizm.setMotorPowers(-100,-100);
 }
 void TurnLeft(){
-  prizm.setMotorPowers(100,50);
+  prizm.setMotorPowers(100,30);
 
 }
 void TurnRight(){
-   prizm.setMotorPowers(60,100);
+   prizm.setMotorPowers(30,100);
  
 }
 void PivotLeft(){
