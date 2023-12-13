@@ -1,0 +1,24 @@
+#include <PRIZM.h>
+#include <TELEOP.h>
+PRIZM prizm;
+PS4 ps4;
+
+void setup(){
+  prizm.PrizmBegin();
+  prizm.setMotorInvert(2,1);
+  Serial.begin(115200);
+  ps4.setDeadZone(LEFT,10);
+  ps4.setDeadZone(RIGHT,10); 
+  }
+void loop (){
+  if(ps4.Button(L1)
+  if(ps4.Button(R1)
+}
+
+void OPEN(){
+  prizm.setServoPosition(2,100);
+}
+
+void CLOSE(){
+  prizm.setServoPosition(2,60);
+}
